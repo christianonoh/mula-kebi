@@ -6,7 +6,19 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        dark: "#1b1b1b",
+        light: "#fff",
+        accent: "#7B00D3", 
+        accentDark: "#ffdb4d",
+        gray: "#747474",
+      },
+      fontFamily: {
+        manrope: ['var(--font-manrope)'],
+        inter: ['var(--font-inter)'],
+      },
+    },
   },
   plugins: [],
 }
