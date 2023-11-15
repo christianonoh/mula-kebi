@@ -1,4 +1,4 @@
-import { allBlogs } from '@/.contentlayer/generated';
+import { allBlogs } from 'contentlayer/generated';
 import { cx, sortBlogs } from '@/utils';
 import Image from 'next/image'
 import React from 'react'
@@ -10,8 +10,8 @@ const HomeCover = () => {
   const sortedBlogs = sortBlogs(allBlogs);
   const blog = sortedBlogs[10];
   return (
-    <div className='inline-block w-full'>
-      <article className={cx(styles.xMargins, 'flex flex-col items-start relative h-[85vh] justify-end')}>
+    <section className='inline-block w-full'>
+      <article className={cx(styles.bottomMargins, 'flex flex-col items-start relative h-[85vh] justify-end sm:mx-10 mx-5')}>
         <div className='absolute top-0 left-0 z-0 w-full h-full rounded-3xl from-transparent bg-gradient-to-b to-dark/90' />
         <Image src={blog.image.filePath.replace('../public', '')} alt={blog.title}
           placeholder='blur'
@@ -33,7 +33,7 @@ const HomeCover = () => {
          </p>
         </div>
       </article>
-    </div>
+    </section>
   )
 }
 
