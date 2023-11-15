@@ -1,9 +1,15 @@
 import Image from 'next/image'
+import { allBlogs } from '@/.contentlayer/generated'
+import { sortBlogs } from '@/utils';
+import HomeCover from '@/components/home/HomeCover';
+import FeaturedSection from '@/components/home/FeaturedSection';
 
 export default function Home() {
+  
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <h1 className="">Home</h1>
+    <main className="">
+      <HomeCover />
+      <FeaturedSection />
     </main>
   )
 }
