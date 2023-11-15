@@ -8,7 +8,12 @@ const styles = {
   topPaddings: 'sm:pt-16 xs:pt-8 pt-12',
   bottomPaddings: 'sm:pb-16 xs:pb-8 pb-12',
 
+  margins: 'sm:m-16 xs:m-8 mx-6 my-12',
   xMargins: 'sm:mx-16 mx-6',
+  xMargins2x: 'sm:mx-32 mx-6',
+  yMargins: 'sm:my-16 xs:my-8 my-12',
+  topMargins: 'sm:mt-16 xs:mt-8 mt-12',
+  bottomMargins: 'sm:mb-16 xs:mb-8 mb-12',
 
   flexCenter: 'flex justify-center items-center',
   flexStart: 'flex justify-start items-start',
