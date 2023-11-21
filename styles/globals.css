@@ -8,3 +8,18 @@
 .blue {
   border: 1px solid blue;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 .icon-link::before,
+h2 .icon-link::before,
+h3 .icon-link::before,
+h4 .icon-link::before,
+h5 .icon-link::before,
+h6 .icon-link::before {
+  content: "#";
+  display: inline-block;
+  font-size: 0.8rem;
+}
