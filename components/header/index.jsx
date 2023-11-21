@@ -7,7 +7,7 @@ import styles from '@/styles'
 
 const Header = () => {
   return (
-    <header className='flex items-center justify-between w-full p-4 px-5 sm:px-10'>
+    <header className='flex items-center justify-between w-full p-6 px-5 sm:px-10'>
       <Logo />
       <nav className='fixed z-30 flex items-center justify-center gap-4 px-8 py-3 font-medium capitalize translate-x-1/2 border border-solid rounded-full border-dark top-6 right-1/2 bg-light/80 backdrop-blur-sm'>
         <Link href='/'>home</Link>
