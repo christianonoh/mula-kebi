@@ -21,14 +21,13 @@ const Footer = () => {
           Subscribe to learn about new technology and updates. Join over 5000+ members community to stay up to date with latest news.
         </p>
         <form
-          className="flex items-stretch min-w-[384px] p-2 my-6 rounded-md bg-light"
+          className="flex items-stretch xs:min-w-[384px] p-2 my-6 rounded-md bg-light"
           onSubmit={handleSubmit(onSubmit)}>
           <input type="email" 
-            className="flex-1 py-2 bg-transparent border-0 border-b border-solid focus:border-dark focus:ring-0 text-dark font-inter" 
-            placeholder="Enter your email" 
+            className="py-2 bg-transparent border-0 border-b border-solid  focus:border-dark focus:ring-0 text-dark font-inter" 
+            placeholder="Enter your email"
             {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}
           />
-
           <input type="submit" className="px-4 py-2 ml-2 rounded-lg flex-0 bg-dark text-light" />
         </form>
         <div className='flex items-center gap-2'>
