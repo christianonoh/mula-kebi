@@ -60,3 +60,26 @@ code[data-line-numbers-max-digits='3'] > [data-line]::before {
   background-color: rgba(255, 255, 255, 0.2) !important;
   padding: 2px !important;
 }
+
+[data-rehype-pretty-code-fragment]{
+  position: relative;
+}
+
+[data-rehype-pretty-code-title]{
+  position: absolute;
+  right: 0;
+  background-color: #7800D3;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: small;
+}
+
+[data-rehype-pretty-code-caption]{
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #747474;
+}
