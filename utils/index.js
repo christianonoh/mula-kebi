@@ -11,3 +11,19 @@ export const sortBlogs = (blogs) => {
 export const formatDate = (date, dateFormat='MMMM dd, yyyy') => {
   return format(parseISO(date), dateFormat);
 }
+
+export const techStack = [
+  "next.js",
+  "tailwind css",
+  "figma",
+  "javaScript",
+  "web design",
+  "Gatsby.js",
+  "strapi",
+  "firebase",
+  "generative AI",
+  "wireframing",
+  "SEO",
+  "framer motion",
+  "sanity",
+]
