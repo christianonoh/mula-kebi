@@ -3,6 +3,7 @@ import Tag from "../elements/Tag"
 import Image from "next/image"
 import { cx } from "@/utils"
 import styles from "@/styles"
+import { slug as slugger } from "github-slugger"
 
 
 const BlogLayoutOne = ({ blog }) => {
@@ -18,7 +19,7 @@ const BlogLayoutOne = ({ blog }) => {
       />
       <div className="absolute bottom-0 z-20 p-4 text-light">
         <Tag
-          link={`/categories/${blog.tags[0]}`}
+          link={`/categories/${slugger(blog.tags[0])}`}
           title={blog.tags[0]}
           className='px-6 py-2 !border text-sm'
         />

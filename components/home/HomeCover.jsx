@@ -5,6 +5,7 @@ import React from 'react'
 import Tag from '../elements/Tag';
 import Link from 'next/link';
 import styles from '@/styles';
+import { slug } from 'github-slugger';
 
 const HomeCover = () => {
   const sortedBlogs = sortBlogs(allBlogs);
@@ -20,7 +21,7 @@ const HomeCover = () => {
           className='object-cover object-center w-full h-full rounded-3xl -z-10'
          />
         <div className={cx(styles.paddings, "z-0 flex flex-col items-start justify-center w-full md:w-3/4 text-light")}>
-         <Tag link={`/categories/${blog.tags[0]}`} title={blog.tags[0]} />
+         <Tag link={`/categories/${slug(blog.tags[0])}`} title={blog.tags[0]} />
          <Link href={blog.url} className='mt-6'>
           <h1 className='text-4xl font-bold capitalize'>
             <span className={cx(styles.underline)}>
