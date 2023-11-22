@@ -17,13 +17,13 @@ const FeaturedSection = () => {
         featured posts
       </h2>
       <div className={cx(styles.topMargins, "grid grid-cols-2 grid-rows-2 gap-6")}>
-        <article className="relative col-span-2 row-span-2 lg:col-span-1 red">
+        <article className="relative col-span-2 row-span-2 lg:col-span-1">
           <BlogLayoutOne blog={sortedBlogs[9]} />
         </article>
-        <article className="relative col-span-2 row-span-1 sm:col-span-1 blue">
+        <article className="relative col-span-2 row-span-1 sm:col-span-1">
           <BlogLayoutTwo blog={sortedBlogs[6]} />
         </article>
-        <article className="relative col-span-2 row-span-1 sm:col-span-1 blue">
+        <article className="relative col-span-2 row-span-1 sm:col-span-1">
           <BlogLayoutTwo blog={sortedBlogs[4]} />
         </article>
       </div>
