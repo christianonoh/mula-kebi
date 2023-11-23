@@ -3,6 +3,11 @@ import Character from "@/public/images/character.png";
 import { techStack } from "@/utils";
 import Link from "next/link";
 
+export const metadata = {
+  title: "About Me",
+  description: `Learn more about me and my skills`,
+};
+
 const AboutPage = () => {
   return (
     <article>
