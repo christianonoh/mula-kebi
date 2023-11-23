@@ -1,6 +1,12 @@
 import ContactForm from '@/components/elements/contactForm';
 import Character from "@/public/images/character.png";
+import siteMetadata from '@/utils/siteMetaData';
 import Image from 'next/image';
+
+export const metadata = {
+  title: "Contact",
+  description: `Contact me through the form on this page or send me an email to ${siteMetadata.email}`,
+};
 
 const contactPage = () => {
   return (
