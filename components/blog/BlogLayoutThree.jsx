@@ -9,7 +9,7 @@ const BlogLayoutThree = ({blog}) => {
     <div className="flex flex-col gap-4 text-dark">
       <Link
         className="h-full col-span-4 overflow-hidden rounded-xl"
-        href={blog.url}>
+        href={`/${blog.url}`}>
         <Image 
           src={blog.image.filePath.replace('../public', '')} 
           alt={blog.title}
@@ -24,7 +24,7 @@ const BlogLayoutThree = ({blog}) => {
         <span className="text-sm font-semibold uppercase text-accent">
           {blog.tags[0]}
         </span>
-        <Link href={blog.url} className='mt-1'>
+        <Link href={`/${blog.url}`} className='mt-1'>
           <h2 className='text-lg font-semibold capitalize text-dark'>
             <span className={cx(styles.underline, 'from-accent/50 to-accent/50')}>
               {blog.title}
