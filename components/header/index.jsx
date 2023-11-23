@@ -2,8 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import Link from 'next/link'
 import { DribbbleIcon, GithubIcon, LinkedinIcon, SunIcon, TwitterIcon } from '../Icons'
-import { cx } from '@/utils'
-import styles from '@/styles'
+import siteMetadata from '@/utils/siteMetaData'
 
 const Header = () => {
   return (
@@ -18,10 +17,10 @@ const Header = () => {
         </button>
       </nav>
       <div className='flex items-center gap-2'>
-        <a href="https://github.com/christianonoh" className='w-6 h-6'><GithubIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
-        <a href="https://github.com/christianonoh" className='w-6 h-6'><TwitterIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
-        <a href="https://github.com/christianonoh" className='w-6 h-6'><DribbbleIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
-        <a href="https://github.com/christianonoh" className='w-6 h-6'><LinkedinIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+        <a href={siteMetadata.github} className='w-6 h-6'><GithubIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+        <a href={siteMetadata.twitter} className='w-6 h-6'><TwitterIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+        <a href={siteMetadata.dribble} className='w-6 h-6'><DribbbleIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+        <a href={siteMetadata.linkedin} className='w-6 h-6'><LinkedinIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
       </div>
     </header>
   )

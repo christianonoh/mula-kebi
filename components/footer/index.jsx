@@ -5,6 +5,7 @@ import { cx } from "@/utils"
 import { DribbbleIcon, GithubIcon, LinkedinIcon, TwitterIcon } from '../Icons'
 import { useForm } from "react-hook-form";
 import Link from "next/link";
+import siteMetadata from "@/utils/siteMetaData";
 
 
 const Footer = () => {
@@ -30,10 +31,10 @@ const Footer = () => {
           <input type="submit" className="px-4 py-2 ml-2 rounded-lg flex-0 bg-dark text-light" />
         </form>
         <div className='flex items-center gap-2'>
-          <a href="https://github.com/christianonoh" className='w-6 h-6'><GithubIcon className='transition-all duration-200 ease-in-out fill-light hover:scale-125' /></a>
-          <a href="https://github.com/christianonoh" className='w-6 h-6'><TwitterIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
-          <a href="https://github.com/christianonoh" className='w-6 h-6'><DribbbleIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
-          <a href="https://github.com/christianonoh" className='w-6 h-6'><LinkedinIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+          <a href={siteMetadata.github} className='w-6 h-6'><GithubIcon className='transition-all duration-200 ease-in-out fill-light hover:scale-125' /></a>
+          <a href={siteMetadata.twitter} className='w-6 h-6'><TwitterIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+          <a href={siteMetadata.linkedin} className='w-6 h-6'><LinkedinIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
+          <a href={siteMetadata.dribble} className='w-6 h-6'><DribbbleIcon className='transition-all duration-200 ease-in-out hover:scale-125' /></a>
         </div>
       </div>
       <div className={cx(styles.xPaddings, "flex  items-center justify-between pt-6 flex-col mt-10 border-t border-solid p border-light md:flex-row sm:text-sm text-xs")}>
