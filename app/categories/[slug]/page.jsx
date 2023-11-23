@@ -3,7 +3,17 @@ import BlogLayoutThree from "@/components/blog/BlogLayoutThree";
 import Tag from "@/components/elements/Tag";
 import { cx } from "@/utils";
 import { slug as slugger }  from 'github-slugger';
-// 
+
+
+// Dynamic metadata for SEO
+export async function generateMetadata({ params }) {
+  const slug = params.slug;
+
+  return {
+    title: `${slug.replace('-', ' ')} Blogs`,
+    description: `Discover more blogs about ${slug === 'all' ? 'web developement' : slug} and expand your knowledge!`,
+  };
+}
 
 const CategoriesPage = ({ params }) => {
   const slug = params.slug;
@@ -38,16 +48,16 @@ const CategoriesPage = ({ params }) => {
     // if (!blogs) notFound();
   return (
     <article>
-      <div className="sm:mx-10 mx-5 flex flex-col mt-5 sm:mt-10">
+      <div className="flex flex-col mx-5 mt-5 sm:mx-10 sm:mt-10">
         <div className="md:px-10 lg:px-20">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-dark mt-6">
+          <h1 className="mt-6 text-2xl font-semibold md:text-4xl lg:text-5xl text-dark">
             {'#'}{slug}
           </h1>
           <p className="mt-2 text-dark">Discover more categories and expand your knowledge!</p>
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap gap-6 px-0 md:px-10 lg:px-20 py-6 border-y-2 mt-10">
+        <div className="flex flex-wrap gap-6 px-0 py-6 mt-10 md:px-10 lg:px-20 border-y-2">
           {
             allCategories.map((tag) => (
               <Tag link={`/categories/${slugger(tag)}`} title={`#${slugger(tag)}`} key={tag}
