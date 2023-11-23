@@ -10,7 +10,6 @@ import Link from "next/link";
 const Footer = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
-  console.log(errors);
   return (
     <footer className={cx(styles.yMargins, styles.yPaddings, "rounded-3xl mx-5 sm:mx-10 bg-dark text-light")}>
       <div className={cx(styles.flexCenter, styles.xPaddings, "flex-col ")}>
@@ -24,7 +23,7 @@ const Footer = () => {
           className="flex items-stretch xs:min-w-[384px] p-2 my-6 rounded-md bg-light"
           onSubmit={handleSubmit(onSubmit)}>
           <input type="email" 
-            className="py-2 bg-transparent border-0 border-b border-solid  focus:border-dark focus:ring-0 text-dark font-inter" 
+            className="py-2 bg-transparent border-0 border-b border-solid focus:border-dark focus:ring-0 text-dark font-inter" 
             placeholder="Enter your email"
             {...register("Email", {required: true, pattern: /^\S+@\S+$/i})}
           />
