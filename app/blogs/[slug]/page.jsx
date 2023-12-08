@@ -21,17 +21,16 @@ export async function generateMetadata({ params }) {
 
   if (blog.image) {
     imageList =
-      typeof blog.image === "string"
-        ? [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")]
-        : [blog.image];
+      typeof blog.image.filePath === "string" ?
+      [siteMetadata.siteUrl + blog.image.filePath.replace("../public", "")] : blog.image;
   }
 
-  const ogImages = imageList.map((image) => ({
-    url: image.includes("http")
-      ? image
-      : siteMetadata.siteUrl + image.replace("../public", ""),
-    alt: blog.title,
-  }));
+  const ogImages = imageList.map(img => {
+    return { url: img.includes("http")
+      ? img
+      : siteMetadata.siteUrl + img,
+    alt: blog.title,}
+  });
 
   const authors = blog?.author ? [blog.author] : siteMetadata.author;
 
