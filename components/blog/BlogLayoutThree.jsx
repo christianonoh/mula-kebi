@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const BlogLayoutThree = ({blog}) => {
   return (
-    <div className="flex flex-col gap-4 text-dark">
+    <div className="flex flex-col gap-4 text-dark dark:text-light">
       <Link
         className="h-full col-span-4 overflow-hidden rounded-xl"
         href={blog.url}>
@@ -21,17 +21,17 @@ const BlogLayoutThree = ({blog}) => {
         />
       </Link>
       <div className="flex flex-col w-full mt-4">
-        <span className="text-sm font-semibold uppercase text-accent">
+        <span className="text-sm font-semibold uppercase text-accent dark:text-accentDark">
           {blog.tags[0]}
         </span>
         <Link href={blog.url} className='mt-1'>
-          <h2 className='text-lg font-semibold capitalize text-dark'>
+          <h2 className='text-lg font-semibold capitalize text-dark dark:text-light'>
             <span className={cx(styles.underline, 'from-accent/50 to-accent/50')}>
               {blog.title}
             </span>
           </h2>
         </Link>
-        <p className="text-base text-gray">
+        <p className="text-xs sm:text-base text-dark/50 dark:text-light/50">
           {formatDate(blog.publishedAt)}
         </p>
         </div>
