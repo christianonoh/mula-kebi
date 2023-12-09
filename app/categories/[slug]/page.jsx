@@ -50,23 +50,23 @@ const CategoriesPage = ({ params }) => {
     <article>
       <div className="flex flex-col mx-5 mt-5 sm:mx-10 sm:mt-10">
         <div className="md:px-10 lg:px-20">
-          <h1 className="mt-6 text-2xl font-semibold md:text-4xl lg:text-5xl text-dark">
+          <h1 className="mt-6 text-2xl font-semibold md:text-4xl lg:text-5xl text-dark dark:text-light">
             {'#'}{slug}
           </h1>
-          <p className="mt-2 text-dark">Discover more categories and expand your knowledge!</p>
+          <p className="mt-2 text-dark dark:text-light">Discover more categories and expand your knowledge!</p>
         </div>
 
         {/* Categories */}
-        <div className="flex flex-wrap gap-6 px-0 py-6 mt-10 md:px-10 lg:px-20 border-y-2">
+        <div className="flex flex-wrap gap-6 px-0 py-6 mt-10 md:px-10 lg:px-20 border-y-2 dark:border-light">
           {
             allCategories.map((tag) => (
               <Tag link={`/categories/${slugger(tag)}`} title={`#${slugger(tag)}`} key={tag}
-              className={`!border-dark !lowercase ${slug == slugger(tag) ? '!bg-dark !text-light' : '!bg-transparent !text-dark'}`} />
+              className={`!border-dark dark:!border-light !lowercase ${slug == slugger(tag) ? '!bg-dark !text-light dark:!text-dark dark:!bg-light' : '!bg-transparent !text-dark dark:!text-light'}`} />
           ))}
         </div>
           
           {/* Blogs */}
-        <div className={cx("grid lg:grid-cols-3 sm:grid-cols-2 lg:grid-rows-2 grid-rows-3 gap-16 mt-5 sm:mt-10 md:mt-24 lg:mt-32")}>
+        <div className={cx("grid lg:grid-cols-3 sm:grid-cols-2 lg:grid-rows-2 grid-rows-3 gap-16 mt-5 sm:mt-10 md:mt-24 lg:mt-32 md:px-10 lg:px-20")}>
         {blogs.map((blog, index) => (
           <article key={index}>
             <BlogLayoutThree blog={blog} />
