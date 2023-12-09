@@ -70,14 +70,14 @@ const BlogPage = ({ params }) => {
   if (!blog) notFound();
 
   return (
-    <article>
+    <article className="">
       <BlogCover blog={blog} />
       <BlogDetails blog={blog} slug={slug} />
-      <div className="grid grid-cols-12 gap-16 px-10 mt-8">
+      <div className="grid grid-cols-12 px-5 mt-8 gap-y-8 lg:gap-8 sxl:gap-16 md:px-10">
         {/* Table of Contents */}
-        <div className="col-span-4">
+        <div className="col-span-12 lg:col-span-4">
           <details
-            className="p-4 border border-dark border-solid text-dark rounded-lg sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto"
+            className="p-4 border border-dark dark:border-light border-solid text-dark dark:text-light rounded-lg sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto"
             open
           >
             <summary className="text-lg font-semibold capitalize cursor-pointer">
@@ -93,11 +93,12 @@ const BlogPage = ({ params }) => {
                   data-[level=two]:pl-0
                   data-[level=two]:pt-2
                   data-[level=two]:border-t
-                  data-[level=three]:pl-6
-                  border-solid border-dark/50 flex items-center justify-start"
+                  sm:data-[level=three]:pl-6
+                  data-[level=three]:pl-4
+                  border-solid border-dark/50 dark:border-light/50 flex items-center justify-start"
                   >
                     {heading.level === "three" ? (
-                      <span className="flex w-1 h-1 mr-2 rounded-full bg-dark">
+                      <span className="flex w-1 h-1 mr-2 rounded-full bg-dark dark:bg-light">
                         &nbsp;
                       </span>
                     ) : null}
@@ -110,7 +111,7 @@ const BlogPage = ({ params }) => {
         </div>
 
         {/* Blog Post  */}
-        <RenderMdx blog={blog} />
+          <RenderMdx blog={blog} />
       </div>
     </article>
   );
