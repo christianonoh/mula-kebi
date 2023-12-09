@@ -35,7 +35,7 @@ const Header = () => {
         </div>
       </button>
 
-      <nav style={{ top: toggled ? '1.5rem' : '-4rem'}} className={cx("flex min-w-[220px] text-sm fixed z-30 items-center justify-center gap-2 px-6 py-3 font-medium capitalize translate-x-1/2 border border-solid rounded-full sm:flex border-dark top-6 right-1/2 bg-light/80 backdrop-blur-sm transition-all ease duration-200")}>
+      <nav style={{ top: toggled ? '1.5rem' : '-4rem'}} className="sm:hidden flex min-w-[220px] text-sm fixed z-30 items-center justify-center gap-2 px-6 py-3 font-medium capitalize translate-x-1/2 border border-solid rounded-full border-dark top-6 right-1/2 bg-light/80 backdrop-blur-sm transition-all ease duration-200">
         <Link href="/">home</Link>
         <Link href="/about">about</Link>
         <Link href="/contact">contact</Link>
