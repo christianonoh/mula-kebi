@@ -12,7 +12,7 @@ const HomeCover = () => {
   const blog = sortedBlogs[10];
   return (
     <section className='inline-block w-full'>
-      <article className={cx(styles.bottomMargins, 'flex flex-col items-start relative h-[85vh] justify-end sm:mx-10 mx-5')}>
+      <article className={cx(styles.bottomMargins, 'flex flex-col items-start relative h-[60vh] sm:h-[85vh] justify-end sm:mx-10 mx-5')}>
         <div className='absolute top-0 left-0 z-0 w-full h-full rounded-3xl from-transparent bg-gradient-to-b to-dark/90' />
         <Image src={blog.image.filePath.replace('../public', '')} alt={blog.title}
           placeholder='blur'
@@ -20,10 +20,10 @@ const HomeCover = () => {
           fill
           className='object-cover object-center w-full h-full rounded-3xl -z-10'
          />
-        <div className={cx(styles.paddings, "z-0 flex flex-col items-start justify-center w-full md:w-3/4 text-light")}>
+        <div className={cx(styles.paddings, "z-0 flex flex-col items-start justify-center w-full lg:w-3/4 text-light")}>
          <Tag link={`/categories/${slug(blog.tags[0])}`} title={blog.tags[0]} />
          <Link href={blog.url} className='mt-6'>
-          <h1 className='text-4xl font-bold capitalize'>
+          <h1 className='text-lg font-bold capitalize sm:text-2xl md:text-3xl lg:text-4xl'>
             <span className={cx(styles.underline)}>
               {blog.title}
             </span>
