@@ -8,7 +8,7 @@ import { slug as slugger } from "github-slugger"
 
 const BlogLayoutOne = ({ blog }) => {
   return (
-    <div className="">
+    <div className="relative">
       <div className='absolute top-0 left-0 z-0 w-full h-full rounded-xl from-transparent bg-gradient-to-b to-dark/90' />
       <Image src={blog.image.filePath.replace('../public', '')} alt={blog.title}
         placeholder='blur'
@@ -21,10 +21,10 @@ const BlogLayoutOne = ({ blog }) => {
         <Tag
           link={`/categories/${slugger(blog.tags[0])}`}
           title={blog.tags[0]}
-          className='px-6 py-2 !border text-sm'
+          className='!px-4 !sm:px-6 !py-1 !sm:py-2 !border text-sm'
         />
         <Link href={blog.url} className='mt-6'>
-          <h2 className='class="font-bold capitalize text-2xl text-light mt-4'>
+          <h2 className='mt-2 text-sm font-bold capitalize sm:mt-4 xs:text-base sm:text-xl md:text-2xl text-light'>
             <span className={cx(styles.underline)}>
               {blog.title}
             </span>
