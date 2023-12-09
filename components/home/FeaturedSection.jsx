@@ -13,7 +13,7 @@ const FeaturedSection = () => {
       // className={cx(styles.xMargins2x, styles.flexCenter, styles.topMargins, 'flex-col')}
       className='flex flex-col items-center justify-center w-full px-5 mt-16 sm:mt-24 md:mt-32 sm:px-10 md:px-24 sxl:px-32'
     >
-      <h2 className="w-full text-4xl font-bold capitalize">
+      <h2 className="w-full text-2xl font-bold capitalize md:text-4xl dark:text-light">
         featured posts
       </h2>
       <div className={cx(styles.topMargins, "grid grid-cols-2 grid-rows-2 gap-6")}>
