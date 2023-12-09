@@ -1,7 +1,7 @@
 import { allBlogs } from "@/.contentlayer/generated";
 import BlogLayoutThree from "@/components/blog/BlogLayoutThree";
 import Tag from "@/components/elements/Tag";
-import { cx } from "@/utils";
+import { cx, getCategories } from "@/utils";
 import { slug as slugger }  from 'github-slugger';
 
 
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
 const CategoriesPage = ({ params }) => {
   const slug = params.slug;
 
-    const allCategories = [];
+    const allCategories = getCategories(allBlogs);
 
 
     /**
@@ -30,10 +30,6 @@ const CategoriesPage = ({ params }) => {
     const blogs = allBlogs.filter(blog => {
       return blog.tags.some(tag => {
         const slugified = slugger(tag);
-
-        if (!allCategories.includes(slugified)) {
-          allCategories.push(slugified);
-        }
 
         if (slug === 'all') return true;
 
