@@ -8,10 +8,10 @@ import { slug } from 'github-slugger'
 const BlogCover = ({ blog }) => {
   return (
     <section className='relative'>
-      <div className={cx(styles.flexCenter, 'flex flex-col h-[70vh] relative')}>
+      <div className={cx(styles.flexCenter, 'flex flex-col h-[50vh] lg:h-[70vh] relative')}>
         <div className={cx(styles.flexCenter, 'z-10 flex-col w-5/6 text-light text-center')}>
           <Tag link={`/categories/${slug(blog.tags[0])}`} title={blog.tags[0]} />
-          <h1 className='mt-6 text-4xl font-bold leading-relaxed capitalize sm:text-5xl'>
+          <h1 className='mt-6 text-2xl font-bold leading-relaxed capitalize md:text-4xl lg:text-5xl'>
             {blog.title}
           </h1>
         </div>
