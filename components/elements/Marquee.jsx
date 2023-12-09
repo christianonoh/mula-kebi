@@ -11,7 +11,7 @@ const Marquee = () => {
   ];
 
   return (
-    <div className="relative flex py-4 overflow-hidden bg-accent text-light">
+    <div className="relative flex py-4 overflow-hidden bg-accent text-light dark:bg-accentDark dark:text-dark text-sm">
       <div className="animate-marquee whitespace-nowrap">
         {insights.map((insight) => (
           <span className="px-4 border-r" key={insight}>
