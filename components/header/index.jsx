@@ -62,7 +62,6 @@ const Header = () => {
         <button
           onClick={() => {
             setMode(mode === "light" ? "dark" : "light");
-            console.log(mode);
           }}
           className={cx("w-6 h-6 p-1 flex rounded-full items-center justify-center transition-all duration-200 ease-in-out",
             mode === "light" ? "bg-dark text-light" : "bg-light"
