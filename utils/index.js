@@ -31,7 +31,7 @@ export const techStack = [
 
 
 export const getCategories = (allBlogs) => {
-  const allCategoriesSet = new Set([]);
+  const allCategoriesSet = new Set();
 
   allBlogs.forEach((post) => {
     // Assuming that the 'tags' property exists in each blog post
