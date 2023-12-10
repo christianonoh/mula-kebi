@@ -20,6 +20,8 @@ const BlogCover = ({ blog }) => {
           placeholder='blur'
           blurDataURL={blog.image.blurhashDataUrl}
           fill
+          priority
+          sizes='100vw'
           className='object-cover object-center w-full h-full -z-10'
         />
       </div>

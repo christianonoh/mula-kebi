@@ -18,6 +18,7 @@ const BlogLayoutThree = ({blog}) => {
           width={blog.image.width}
           height={blog.image.height}
           className="object-cover object-center w-full h-full transition-all duration-200 ease-in-out hover:scale-105 aspect-[4/3]"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </Link>
       <div className="flex flex-col w-full mt-4">

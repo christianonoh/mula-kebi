@@ -1,7 +1,7 @@
-import ContactForm from '@/components/elements/contactForm';
+import ContactForm from "@/components/elements/contactForm";
 import Character from "@/public/images/character.png";
-import siteMetadata from '@/utils/siteMetaData';
-import Image from 'next/image';
+import siteMetadata from "@/utils/siteMetaData";
+import Image from "next/image";
 
 export const metadata = {
   title: "Contact",
@@ -18,19 +18,21 @@ const contactPage = () => {
         >
           <Image
             src={Character}
-            alt='Character happy'
+            alt="Character happy"
             className="object-contain h-full"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         <div className="items-center justify-center w-full px-5 py-10 lg:px-16 md:w-3/5">
           <h2 className="mb-4 text-4xl font-semibold text-center sm:text-5xl text-dark dark:text-light lg:text-6xl">
-          Let's Connect!
+            Let's Connect!
           </h2>
           <ContactForm />
         </div>
       </section>
     </article>
-  )
-}
+  );
+};
 
-export default contactPage
+export default contactPage;

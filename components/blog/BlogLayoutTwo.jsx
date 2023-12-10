@@ -18,6 +18,7 @@ const BlogLayoutTwo = ({ blog }) => {
           width={blog.image.width}
           height={blog.image.height}
           className="object-cover object-center w-full h-full transition-all duration-200 ease-in-out aspect-square hover:scale-105"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </Link>
       <div className="col-span-12 lg:col-span-8">

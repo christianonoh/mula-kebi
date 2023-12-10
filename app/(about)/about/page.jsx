@@ -13,13 +13,15 @@ const AboutPage = () => {
     <article>
       <section className="flex flex-col items-center justify-center border-b-2 md:flex-row border-dark">
         <div
-          className="items-center justify-center w-full md:w-1/2 md:h-[60vh] h-[40vh] border-r-2
+          className="items-center justify-center w-full md:w-1/2 md:h-[60vh] border-r-2
  border-dark"
         >
           <Image
             src={Character}
             alt='Welcoming character'
             className="object-contain h-full"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         <div className="items-center justify-center w-full px-5 py-10 lg:px-16 md:w-1/2">
